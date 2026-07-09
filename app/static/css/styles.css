@@ -1,0 +1,173 @@
+/* Modern Dark Slate Theme for LLM Firewall Dashboard */
+:root {
+    --bg-dark: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --primary-color: #8b5cf6;
+    --primary-glow: rgba(139, 92, 246, 0.4);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+}
+
+/* Glassmorphic Navbar & Side panels */
+.navbar-custom {
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Glassmorphism Cards */
+.card-custom {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+}
+
+/* Metric Display Widgets */
+.metric-val {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.metric-lbl {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Custom Table Styles */
+.table-custom {
+    color: var(--text-primary);
+    background-color: transparent !important;
+}
+
+.table-custom th {
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--border-color);
+    padding: 16px;
+}
+
+.table-custom td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    font-size: 0.875rem;
+}
+
+.table-custom tr {
+    background-color: transparent !important;
+    transition: background-color 0.2s;
+}
+
+.table-custom tr:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Badges for Firewall Decisions */
+.badge-allow {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.badge-warn {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.badge-sanitize {
+    background-color: rgba(139, 92, 246, 0.15);
+    color: var(--primary-color);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.badge-block {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: var(--danger);
+    border: 1px solid rgba(ef, 68, 68, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Code Payload Viewer */
+pre.code-view {
+    background-color: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    max-height: 120px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Custom Settings Inputs */
+.form-control-custom {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px;
+}
+
+.form-control-custom:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.25rem var(--primary-glow) !important;
+}
+
+.glow-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 14px var(--primary-glow);
+    transition: all 0.2s;
+    border-radius: 8px;
+    padding: 10px 24px;
+}
+
+.glow-btn:hover {
+    background-color: #7c3aed;
+    box-shadow: 0 6px 20px var(--primary-glow);
+    transform: translateY(-1px);
+}
