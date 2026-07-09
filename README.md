@@ -1,4 +1,3 @@
-<img width="1217" height="967" alt="Screenshot 2026-07-09 095235" src="https://github.com/user-attachments/assets/3dbb3905-aa0c-440d-9134-1ba49e21d4c7" />
 <div align="center">
 
 # 🛡️ LLM Prompt Injection Firewall
@@ -38,6 +37,7 @@ Instead of sending user prompts directly to an LLM, requests first pass through 
 - 🚫 Blocked
 
 The project follows a proxy architecture and is compatible with OpenAI-style APIs.
+<img width="1917" height="995" alt="Screenshot 2026-07-08 150009" src="https://github.com/user-attachments/assets/cbe2d08f-31c5-44b1-bbe1-18dee9ae38e6" />
 
 ---
 
@@ -99,6 +99,7 @@ The project follows a proxy architecture and is compatible with OpenAI-style API
 - JSON Responses
 - Mock LLM Support
 - Downstream LLM Proxy
+<img width="1918" height="993" alt="Screenshot 2026-07-08 150728" src="https://github.com/user-attachments/assets/d486cf51-bd50-422f-a615-024f2145d8f5" />
 
 ---
 
@@ -277,6 +278,7 @@ Supported modes
 | enforce | Blocks high-risk requests |
 
 ---
+<img width="1217" height="967" alt="Screenshot 2026-07-09 095235" src="https://github.com/user-attachments/assets/074cd53b-3a53-45da-939f-04bba216b7ca" />
 
 # 📈 Dashboard
 
