@@ -1,3 +1,4 @@
+<img width="1217" height="967" alt="Screenshot 2026-07-09 095235" src="https://github.com/user-attachments/assets/3dbb3905-aa0c-440d-9134-1ba49e21d4c7" />
 <div align="center">
 
 # 🛡️ LLM Prompt Injection Firewall
