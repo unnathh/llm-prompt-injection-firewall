@@ -18,7 +18,7 @@ Detect • Analyze • Score • Sanitize • Block Prompt Injection Attacks Bef
 
 <br><br>
 
-**🚀 Live Demo:** https://llm-prompt-injection-firewall.onrender.com
+**🚀 Live Demo:** https://llm-prompt-injection-firewall.onrender.com/dashboard
 
 </div>
 
