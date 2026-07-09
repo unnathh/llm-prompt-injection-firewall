@@ -2,20 +2,27 @@
 
 # 🛡️ LLM Prompt Injection Firewall
 
-### Enterprise-grade AI Security Middleware for Large Language Models
+### Enterprise-grade AI Security Middleware for Protecting Large Language Model (LLM) Applications
 
-Detect • Score • Sanitize • Block Prompt Injection Attacks before they reach your LLM.
+Detect • Analyze • Score • Sanitize • Block Prompt Injection Attacks Before They Reach Your LLM
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3.12-blue?logo=python">
-  <img src="https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi">
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker">
-  <img src="https://img.shields.io/badge/Render-Deployed-46E3B7">
-  <img src="https://img.shields.io/badge/License-MIT-yellow">
-  <img src="https://img.shields.io/badge/Status-Active-success">
-</p>
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Render](https://img.shields.io/badge/Render-Deployed-46E3B7?style=for-the-badge&logo=render&logoColor=black)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+
+<br><br>
+
+**🚀 Live Demo:** https://llm-prompt-injection-firewall.onrender.com
 
 </div>
+
+---
 
 ---
 
