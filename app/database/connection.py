@@ -5,14 +5,24 @@ from config.settings import settings
 from app.models.database import Base, DashboardUser, FirewallConfigOverride
 import bcrypt
 
-# Set up connection pool (using connect_args for sqlite thread compatibility)
-connect_args = {"check_same_thread": False} if settings.DATABASE_URL.startswith("sqlite") else {}
+# Handle Render postgres dialect (postgres:// -> postgresql://)
+db_url = settings.DATABASE_URL or "sqlite:///./firewall.db"
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
 
-engine = create_engine(
-    settings.DATABASE_URL,
-    connect_args=connect_args,
-    echo=False
-)
+# Set up connection pool (using connect_args for sqlite thread compatibility)
+if db_url.startswith("sqlite"):
+    connect_args = {"check_same_thread": False}
+    engine = create_engine(
+        db_url,
+        connect_args=connect_args,
+        echo=False
+    )
+else:
+    engine = create_engine(
+        db_url,
+        echo=False
+    )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
