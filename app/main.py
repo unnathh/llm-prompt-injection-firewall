@@ -121,8 +121,8 @@ async def chat_completions(request: Request, payload: ChatCompletionRequest) -> 
     model = payload.model
     messages = [m.model_dump() for m in payload.messages]
 
-    # Get firewall action stored in request state by middleware
-    fw_action = getattr(request.state, "firewall_action", "allow")
+    # Get firewall headers (injected by middleware)
+    fw_action = request.state._state.get("firewall_action", "allow") if hasattr(request, "state") else "allow"
     
     # 1. Check if downstream LLM is configured
     if settings.DOWNSTREAM_LLM_URL:
@@ -151,7 +151,8 @@ async def chat_completions(request: Request, payload: ChatCompletionRequest) -> 
             )
             
             # Record metrics
-            REQUESTS_TOTAL.labels(method=method, path=path, action=fw_action).inc()
+            action_header = response.headers.get("X-Firewall-Action", "allow")
+            REQUESTS_TOTAL.labels(method=method, path=path, action=action_header).inc()
             REQUESTS_LATENCY.labels(method=method, path=path).observe(time.perf_counter() - start_time)
             
             return Response(
@@ -166,6 +167,8 @@ async def chat_completions(request: Request, payload: ChatCompletionRequest) -> 
         # Simulate completion response
         mock_response = get_mock_completion(messages, model)
         
+        # Read action header added by firewall middleware response handler in real deployment.
+        # Since response is generated directly here, middleware will process and apply action in its final stage.
         REQUESTS_TOTAL.labels(method=method, path=path, action=fw_action).inc()
         REQUESTS_LATENCY.labels(method=method, path=path).observe(time.perf_counter() - start_time)
         
